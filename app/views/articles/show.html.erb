@@ -2,5 +2,10 @@
 <h1><%= @article.body %></h1>
 <ul>
   <li> <%= link_to 'Edit',edit_article_path(@article) %></li>
+  <li><%=  link_to 'Destroy', article_path,
+    data:{
+      turbo_method: :delete,
+      turbo_confirm:'Are you sure to delete this article?'
+    } %></li>
   <li> <%= link_to 'Voltar',root_path %> </li>
 </ul>
