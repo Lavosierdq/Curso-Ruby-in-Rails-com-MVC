@@ -10,7 +10,9 @@
   <% end %>
   </ul>
 -->
+
 <%= render 'longer_featured' %>
+<!-- div da linha 226 -->
 <div class="row mb-2">
   <%= render 'medium_featured' %>
   <%= render 'medium_featured' %>
@@ -21,9 +23,9 @@
     <h3 class="pb-4 mb-4 fst-italic border-bottom">
       From the Firehose
     </h3>
+    <p><%= link_to 'New_article',new_article_path,class:'btn btn-primary' %></p>
+    <%= render @articles %>
+    <%= render 'pagination' %>
   </div>
+  <%= render 'rigth_side' %>
 </div>
-
-<%= link_to 'New Article',new_article_path %>
-<%= render @articles %>
-<%= render 'pagination' %>
