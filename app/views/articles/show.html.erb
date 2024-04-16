@@ -1,11 +1,17 @@
+<!--
 <h1><%= @article.title %></h1>
 <h1><%= @article.body %></h1>
-<ul>
-  <li> <%= link_to 'Edit',edit_article_path(@article) %></li>
-  <li><%=  link_to 'Destroy', article_path,
-    data:{
-      turbo_method: :delete,
-      turbo_confirm:'Are you sure to delete this article?'
-    } %></li>
-  <li> <%= link_to 'Voltar',root_path %> </li>
-</ul>
+-->
+
+<article class="blog-post">
+  <h2 class="display-5 link-body-emphasis mb-1"><%= @article.title %></h2>
+  <p class="blog-post-meta"><%= Dia_mes_ano(@article.created_at) %> by <a href="#">Chris</a></p>
+
+  <p><%= @article.body %></p>
+
+  <%= link_to 'Edit',edit_article_path(@article),class:'btn btn-secondary' %>
+  <%= link_to 'Destroy', article_path(@article),
+    data:{turbo_method: :delete,
+          turbo_confirm:'Are you sure to delete this article?'},class:'btn btn-danger'%>
+  <%= link_to 'Voltar',root_path,class:'btn btn-info' %> 
+</article>
