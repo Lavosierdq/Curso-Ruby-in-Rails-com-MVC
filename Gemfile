@@ -4,6 +4,9 @@ ruby "3.0.1"
 
 gem 'bootstrap','~> 5.2.0'
 
+#gem para criar form mais simples
+gem 'simple_form'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
@@ -67,3 +70,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "kaminari", "~> 1.2"
